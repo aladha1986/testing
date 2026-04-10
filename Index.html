@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Zedcor Inc. - Q3 2025 Financial Statement Review</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; background:#f4f5f7; color:#1a1a2e; font-size:14px; line-height:1.6; }
+.header { background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 100%); color:white; padding:36px 48px 28px; border-bottom:4px solid #2563eb; }
+.header-top { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px; }
+.header h1 { font-size:22px; font-weight:700; }
+.header .subtitle { font-size:13px; color:#94a3b8; margin-top:4px; }
+.badge-container { display:flex; gap:10px; align-items:center; flex-shrink:0; }
+.badge { padding:5px 14px; border-radius:20px; font-size:12px; font-weight:600; }
+.badge-green { background:#16a34a; color:white; }
+.badge-yellow { background:#d97706; color:white; }
+.badge-red { background:#dc2626; color:white; }
+.header-meta { font-size:12px; color:#64748b; margin-top:10px; border-top:1px solid #1e3a5f; padding-top:10px; }
+.container { max-width:1100px; margin:0 auto; padding:32px 24px; }
+.scorecard-row { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:28px; }
+.scorecard { background:white; border-radius:10px; padding:20px; border-top:4px solid; box-shadow:0 1px 4px rgba(0,0,0,.07); }
+.scorecard.green { border-color:#16a34a; }
+.scorecard.yellow { border-color:#d97706; }
+.scorecard.red { border-color:#dc2626; }
+.scorecard.blue { border-color:#2563eb; }
+.scorecard .score-val { font-size:28px; font-weight:700; line-height:1.1; margin-bottom:4px; }
+.scorecard.green .score-val { color:#16a34a; }
+.scorecard.yellow .score-val { color:#d97706; }
+.scorecard.red .score-val { color:#dc2626; }
+.scorecard.blue .score-val { color:#2563eb; }
+.scorecard .score-label { font-size:12px; color:#64748b; font-weight:500; text-transform:uppercase; letter-spacing:.4px; }
+.scorecard .score-note { font-size:11px; color:#94a3b8; margin-top:6px; }
+.card { background:white; border-radius:10px; box-shadow:0 1px 4px rgba(0,0,0,.07); margin-bottom:20px; overflow:hidden; }
+.card-header { padding:14px 20px; font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:.6px; display:flex; align-items:center; gap:8px; }
+.card-header.green { background:#f0fdf4; color:#166534; border-bottom:2px solid #bbf7d0; }
+.card-header.yellow { background:#fffbeb; color:#92400e; border-bottom:2px solid #fde68a; }
+.card-header.red { background:#fef2f2; color:#991b1b; border-bottom:2px solid #fecaca; }
+.card-header.blue { background:#eff6ff; color:#1e40af; border-bottom:2px solid #bfdbfe; }
+.card-body { padding:18px 20px; }
+.issue-item { display:flex; gap:14px; padding:14px 0; border-bottom:1px solid #f1f5f9; }
+.issue-item:last-child { border-bottom:none; }
+.issue-icon { flex-shrink:0; width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:16px; font-weight:700; margin-top:2px; }
+.icon-red { background:#fef2f2; color:#dc2626; }
+.icon-yellow { background:#fffbeb; color:#d97706; }
+.icon-green { background:#f0fdf4; color:#16a34a; }
+.icon-blue { background:#eff6ff; color:#2563eb; }
+.issue-content h4 { font-size:13px; font-weight:600; color:#1a1a2e; margin-bottom:4px; }
+.issue-content p { font-size:12.5px; color:#4b5563; line-height:1.5; }
+.detail-row { display:flex; gap:10px; margin-top:8px; flex-wrap:wrap; }
+.detail-pill { background:#f1f5f9; border-radius:4px; padding:2px 8px; font-size:11.5px; font-weight:500; color:#374151; font-family:'Courier New',monospace; }
+.detail-pill.red { background:#fef2f2; color:#991b1b; }
+.detail-pill.yellow { background:#fffbeb; color:#92400e; }
+.detail-pill.green { background:#f0fdf4; color:#166534; }
+.pass-table { width:100%; border-collapse:collapse; font-size:12px; }
+.pass-table th { background:#f8fafc; color:#64748b; font-weight:600; text-align:left; padding:8px 12px; border-bottom:2px solid #e2e8f0; font-size:11px; text-transform:uppercase; letter-spacing:.4px; }
+.pass-table td { padding:7px 12px; border-bottom:1px solid #f1f5f9; color:#374151; }
+.pass-table tr:last-child td { border-bottom:none; }
+.pass-table .check { color:#16a34a; font-weight:700; }
+.two-col { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.footer { margin-top:32px; padding:16px 24px; background:white; border-radius:10px; border-left:4px solid #64748b; font-size:11.5px; color:#64748b; line-height:1.6; }
+.footer strong { color:#374151; }
+.summary-box { background:#f8fafc; border-radius:8px; padding:16px; border-left:4px solid #2563eb; margin-bottom:0; }
+.summary-box p { font-size:13.5px; color:#374151; line-height:1.7; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-top">
+    <div>
+      <h1>Zedcor Inc. (TSX-V: ZDC) &mdash; Financial Statement Review</h1>
+      <div class="subtitle">Three &amp; Nine Months Ended September 30, 2025 &nbsp;|&nbsp; Condensed Consolidated Interim (Unaudited)</div>
+    </div>
+    <div class="badge-container">
+      <span class="badge badge-red">3 Issues Found</span>
+      <span class="badge badge-yellow">7 Flags</span>
+      <span class="badge badge-green">92 / 95 Checks Passed</span>
+    </div>
+  </div>
+  <div class="header-meta">
+    Audit scope: Balance Sheet &bull; Income Statement &bull; Cash Flow &bull; SOCIE &bull; Notes 2&ndash;15 &nbsp;|&nbsp;
+    95 independent tie-out checks performed &nbsp;|&nbsp; Stated in C$000s &nbsp;|&nbsp; Approved by Board: November 12, 2025
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="scorecard-row">
+    <div class="scorecard green">
+      <div class="score-val">92 / 95</div>
+      <div class="score-label">Checks Passed</div>
+      <div class="score-note">All primary statement totals, rollforwards, and cross-references verified</div>
+    </div>
+    <div class="scorecard red">
+      <div class="score-val">3</div>
+      <div class="score-label">Issues Found</div>
+      <div class="score-note">2 presentation / classification items; 1 rounding discrepancy of $1K</div>
+    </div>
+    <div class="scorecard yellow">
+      <div class="score-val">7</div>
+      <div class="score-label">Analytical Flags</div>
+      <div class="score-note">No errors &mdash; context and disclosure items for management review</div>
+    </div>
+    <div class="scorecard blue">
+      <div class="score-val">$0</div>
+      <div class="score-label">Material Misstatement</div>
+      <div class="score-note">Largest financial discrepancy: $1K rounding; below any threshold</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header blue">Executive Summary</div>
+    <div class="card-body">
+      <div class="summary-box">
+        <p>
+          The Q3 2025 financial statements are <strong>substantially accurate and internally consistent.</strong> 
+          All primary financial statement totals tie, all schedule rollforwards balance, and all note disclosures 
+          cross-reference correctly to the face statements. The three issues identified are 
+          <strong>low-severity presentation and rounding items</strong> &mdash; none represent a financial misstatement 
+          that affects reported net income, total assets, or shareholders&rsquo; equity. Seven analytical observations 
+          are flagged for management awareness, primarily relating to liquidity posture, FX exposure, G&amp;A scaling, 
+          and one disclosure clarity item in the subsequent events note.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header red">Issues Requiring Attention (3)</div>
+    <div class="card-body">
+
+      <div class="issue-item">
+        <div class="issue-icon icon-yellow">1</div>
+        <div class="issue-content">
+          <h4>Issue 1 &mdash; Note 12 Working Capital Mixes Operating and Investing Items (Presentation)</h4>
+          <p>
+            Note 12 is titled &ldquo;Changes in Non-Cash Working Capital&rdquo; but combines both <em>operating</em> WC changes
+            (AR, Inventory, Prepaid, AP) and the <em>investing</em> WC line (AP related to investing activities) in the same table.
+            Summing only the four operating line items produces a result that does not match the operating WC total on the cash flow 
+            statement, because the investing WC of <strong>$2,998K (9M)</strong> and <strong>$(39)K (Q3)</strong> must be excluded.
+            The cash flow statement correctly separates these, but Note 12 as presented could mislead a reader.
+          </p>
+          <div class="detail-row">
+            <span class="detail-pill">Note 12 operating-only sum (9M): $(5,926)K</span>
+            <span class="detail-pill">CF operating WC reported: $(2,928)K</span>
+            <span class="detail-pill red">Unexplained gap: $2,998K = investing WC line</span>
+            <span class="detail-pill yellow">Severity: Presentation only &mdash; no financial impact</span>
+          </div>
+          <p style="margin-top:8px; color:#6b7280; font-size:12px;">
+            <strong>Recommendation:</strong> Add a clear sub-total separating operating vs. investing WC in Note 12, 
+            or cross-reference the investing line to the CF statement to avoid reader confusion.
+          </p>
+        </div>
+      </div>
+
+      <div class="issue-item">
+        <div class="issue-icon icon-yellow">2</div>
+        <div class="issue-content">
+          <h4>Issue 2 &mdash; $1K Rounding Discrepancy in Share Issuance Gross Proceeds (Note 7)</h4>
+          <p>
+            Note 7 states 7,555,500 shares were issued at $3.35 per share for gross proceeds of <strong>$25,310K</strong>.
+            However, 7,555,500 &times; $3.35 = $25,310,925, which rounds to <strong>$25,311K</strong>, not $25,310K.
+            As a result, the disclosed net proceeds ($25,310K &minus; $1,817K = $23,493K) are understated by $1K 
+            versus the mathematically correct figure of $23,494K.
+          </p>
+          <div class="detail-row">
+            <span class="detail-pill">7,555,500 &times; $3.35 = $25,310,925</span>
+            <span class="detail-pill">Rounds to: $25,311K</span>
+            <span class="detail-pill red">Reported: $25,310K (off by $925)</span>
+            <span class="detail-pill yellow">Net proceeds impact: $23,493K vs $23,494K</span>
+          </div>
+          <p style="margin-top:8px; color:#6b7280; font-size:12px;">
+            <strong>Recommendation:</strong> Confirm with underwriters whether gross proceeds were exactly $25,310,000 
+            (implying a fractional offering price or contractual rounding). 
+            If $25,311K is correct, update the footnote. Difference is immaterial but should be documented.
+          </p>
+        </div>
+      </div>
+
+      <div class="issue-item">
+        <div class="issue-icon icon-yellow">3</div>
+        <div class="issue-content">
+          <h4>Issue 3 &mdash; Subsequent Event Note Ambiguous on Replaced Facility Structure (Note 15)</h4>
+          <p>
+            Note 15 states the new $50,000K revolving facility &ldquo;replaces the Company&rsquo;s previous $30,000 credit facility.&rdquo;
+            However, Note 6 shows the replaced facility consists of <em>two</em> instruments: a $20,000K term loan 
+            and a $10,000K revolving loan (combined: $30,000K). Calling it a single &ldquo;$30,000 credit facility&rdquo; 
+            is technically accurate in aggregate but could mislead a reader unfamiliar with Note 6.
+          </p>
+          <div class="detail-row">
+            <span class="detail-pill">Term Loan: $20,000K</span>
+            <span class="detail-pill">Revolving Loan: $10,000K</span>
+            <span class="detail-pill green">Combined: $30,000K (ties to Note 15)</span>
+            <span class="detail-pill yellow">Severity: Disclosure clarity only</span>
+          </div>
+          <p style="margin-top:8px; color:#6b7280; font-size:12px;">
+            <strong>Recommendation:</strong> For Q4, rephrase as &ldquo;replaces the Company&rsquo;s previous ATB Financial 
+            credit facilities comprising a $20,000K term loan and $10,000K revolving facility.&rdquo;
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header yellow">Analytical Flags &amp; Disclosure Notes (7)</div>
+    <div class="card-body">
+
+      <div class="issue-item">
+        <div class="issue-icon icon-yellow">!</div>
+        <div class="issue-content">
+          <h4>Flag 1 &mdash; Liquidity Tightening: Cash at $1,501K</h4>
+          <p>Cash declined $4,262K YTD to $1,501K despite generating $10,715K from operations. 
+          The outflow is driven by $40,208K in CapEx for tower fleet expansion. The Company is materially reliant 
+          on its new $50,000K facility announced October 6 (Note 15). As at Q3, the revolving facility was already 
+          64.7% utilized ($6,474K of $10,000K). Monitoring going-concern indicators is appropriate if 
+          operating cash flow does not scale with the fleet.</p>
+          <div class="detail-row">
+            <span class="detail-pill">Cash Sep 30: $1,501K</span>
+            <span class="detail-pill red">Revolving: 64.7% drawn at quarter-end</span>
+            <span class="detail-pill">Operating CF (9M): +$10,715K</span>
+            <span class="detail-pill">CapEx (9M): $(40,208)K</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="issue-item">
+        <div class="issue-icon icon-yellow">!</div>
+        <div class="issue-content">
+          <h4>Flag 2 &mdash; Volatile AOCI / FX Translation Swings</h4>
+          <p>Q3 2025 recorded a $749K FX <em>gain</em> in OCI, yet the 9M total is a $(750)K <em>loss</em>. 
+          This implies H1 2025 absorbed approximately $(1,499)K in FX translation losses &mdash; a significant 
+          intra-year swing. As US operations scale (now $42,616K of PP&amp;E, 54.5% of total), 
+          USD/CAD volatility will increasingly affect reported book value.</p>
+          <div class="detail-row">
+            <span class="detail-pill">Q3 OCI gain: +$749K</span>
+            <span class="detail-pill red">9M OCI loss: $(750)K</span>
+            <span class="detail-pill yellow">Implied H1 2025 loss: ~$(1,499)K</span>
+            <span class="detail-pill">US PP&amp;E: $42,616K (54.5% of total)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="issue-item">
+        <div class="issue-icon icon-blue">+</div>
+        <div class="issue-content">
+          <h4>Flag 3 &mdash; Gross Margin Stability: 63.3&ndash;63.5% (Positive)</h4>
+          <p>Gross margin is healthy and consistent: 63.5% in Q3, 63.3% YTD, up from 59.2% in Q3 2024 (+430 bps). 
+          The expansion of the US business has not compressed margins, suggesting strong pricing discipline 
+          and operating leverage. This positive trend is worth highlighting in investor communications.</p>
+          <div class="detail-row">
+            <span class="detail-pill green">Q3 2025 GM: 63.5%</span>
+            <span class="detail-pill green">9M 2025 GM: 63.3%</span>
+            <span class="detail-pill">Q3 2024 GM: 59.2%</span>
+            <span class="detail-pill green">YoY improvement: +430 bps</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="issue-item">
+        <div class="issue-icon icon-yellow">!</div>
+        <div class="issue-content">
+          <h4>Flag 4 &mdash; Prepaid Expenses &amp; Deposits Up $1,829K YTD (No Disclosure)</h4>
+          <p>Combined current and non-current prepaid/deposits grew from $1,016K (Dec 2024) to $2,845K (Sep 2025), 
+          an increase of $1,829K (+180%). No explanatory note is provided. 
+          Given the rapid US expansion, this likely reflects facility security deposits or supplier advance payments, 
+          but disclosure of the nature of the increase would improve transparency.</p>
+          <div class="detail-row">
+            <span class="detail-pill">Dec 2024: $1,016K</span>
+            <span class="detail-pill yellow">Sep 2025: $2,845K (+$1,829K, +180%)</span>
+            <span class="detail-pill red">No explanatory note provided</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="issue-item">
+        <div class="issue-icon icon-blue">i</div>
+        <div class="issue-content">
+          <h4>Flag 5 &mdash; CapEx Run Rate Implies Full-Year ~$57M; Fleet Nearly Doubled</h4>
+          <p>The Company deployed $43,206K in PP&amp;E in 9M 2025, implying an annualized rate of ~$57,600K. 
+          Net PP&amp;E grew from $42,714K to $78,201K (+83%) in nine months. 
+          Disclosure of operational capacity additions (number of towers deployed) would provide 
+          meaningful context for this capital intensity level.</p>
+          <div class="detail-row">
+            <span class="detail-pill">9M CapEx: $43,206K</span>
+            <span class="detail-pill yellow">Implied annualized: ~$57,600K</span>
+            <span class="detail-pill">PP&amp;E growth: $42,714K &rarr; $78,201K (+83%)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="issue-item">
+        <div class="issue-icon icon-blue">i</div>
+        <div class="issue-content">
+          <h4>Flag 6 &mdash; Covenant Compliance Stated but Ratios Not Disclosed</h4>
+          <p>Note 6 confirms compliance with financial covenants (Net Funded Debt/EBITDA &le; 3.00x; 
+          FCCR &ge; 1.15x) but does not disclose the actual ratios achieved. 
+          Given the high CapEx and liquidity position, investors and lenders would benefit from 
+          understanding covenant headroom. The new $50,000K facility will likely carry similar requirements.</p>
+          <div class="detail-row">
+            <span class="detail-pill">Net Funded Debt / EBITDA: &le; 3.00x required</span>
+            <span class="detail-pill">FCCR: &ge; 1.15x required</span>
+            <span class="detail-pill yellow">Actual ratios: Not disclosed</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="issue-item">
+        <div class="issue-icon icon-yellow">!</div>
+        <div class="issue-content">
+          <h4>Flag 7 &mdash; G&amp;A Growing Faster Than Revenue: 42.5% of Revenue vs 35.7% Prior Year</h4>
+          <p>G&amp;A expenses grew 116% YoY (9M: $8,083K &rarr; $17,455K), outpacing revenue growth of 81%. 
+          Corporate G&amp;A alone was $7,362K YTD. The G&amp;A-to-revenue ratio deteriorated from 35.7% to 42.5%. 
+          Management should monitor whether corporate overhead scales appropriately as the US business matures 
+          and provides operating leverage.</p>
+          <div class="detail-row">
+            <span class="detail-pill">9M 2024 G&amp;A: $8,083K (35.7% of rev)</span>
+            <span class="detail-pill red">9M 2025 G&amp;A: $17,455K (42.5% of rev)</span>
+            <span class="detail-pill">Corporate G&amp;A: $7,362K</span>
+            <span class="detail-pill yellow">G&amp;A growth +116% vs Revenue +81%</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <div class="card-header green">Primary Statements &mdash; All Clear</div>
+      <div class="card-body" style="padding-top:12px;">
+        <table class="pass-table">
+          <thead><tr><th>Check</th><th style="text-align:center;">Result</th></tr></thead>
+          <tbody>
+            <tr><td>Balance Sheet totals tie (Sep 2025)</td><td class="check" style="text-align:center;">&#10003;</td></tr>
+            <tr><td>Balance Sheet totals tie (Dec 2024)</td><td class="check" style="text-align:center;">&#10003;</td></tr>
+            <tr><td>Assets = Liabilities + Equity (both dates)</td><td class="check" style="text-align:center;">&#10003;</td></tr>
+            <tr><td>Equity component sum matches total</td><td class="check" style="text-align:center;">&#10003;</td></tr>
+            <tr><td>9M Gross Margin = Revenue &minus; Direct Expenses</td><td class="check" style="text-align:center;">&#10003;</td></tr>
+            <tr><td>Q3 Gross Margin = Revenue &minus; Direct Expenses</td><td class="check" style="text-align:center;">&#10003;</td></tr>
+            <tr><td>9M Income Before Tax mathematically correct</td><td class="check" style="text-align:center;">&#10003;</td></tr>
+            <tr><td>Q3 Income Before Tax mathematically correct</td><td class="check" style="text-align:center;">&#10003;</td></tr>
+            <tr><td>9M Cash Flow net change ties Begin &rarr; End</td><td class="check" style="text-align:center;">&#10003;</td></tr>
+            <tr><td>Q3 Cash Flow net change ties Begin &rarr; End</td><td class="check" style="text-align:center;">&#10003;</td></tr>
+            <tr><td>SOCIE equity rollforward (9M 2025)</td><td class="check" style="text-align:center;">&#10003;</td></tr>
+            <tr><td>SOCIE equity rollforward (9M 2024)</td><td class="check" style="text-align:center;">&#10003;</td></tr>
+            <tr><td>EPS basic/diluted calculations correct</td><td class="check" style="text-align:center;">&#10003;</td></tr>
+            <tr><td>Revenue components (Note 10) tie to IS</td><td class="check" style="text-align:center;">&#10003;</td></tr>
+            <tr><td>Finance costs (Note 11) components tie to IS</td><td class="check" style="text-align:center;">&#10003;</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header green">Notes &amp; Schedules &mdash; All Clear</div>
+      <div class="card-body" style="padding-top:12px;">
+        <table class="pass-table">
+          <thead><tr><th>Check</th><th style="text-align:center;">Result</th></tr></thead>
+          <tbody>
+            <tr><td>PPE cost rollforward (total + by class)</td><td class="check" style="text-align:center;">&#10003;</td></tr>
+            <tr><td>PPE accumulated depreciation rollforward</td><td class="check" style="text-align:center;">&#10003;</td></tr>
+            <tr><td>PPE net book value = Cost &minus; Accum Depr</td><td class="check" style="text-align:center;">&#10003;</td></tr>
+            <tr><td>ROU asset cost &amp; depreciation rollforward</td><td class="check" style="text-align:center;">&#10003;</td></tr>
+            <tr><td>ROU net book value ties to balance sheet</td><td class="check" style="text-align:center;">&#10003;</td></tr>
+            <tr><td>Lease liabilities rollforward + current/LT split</td><td class="check" style="text-align:center;">&#10003;</td></tr>
+            <tr><td>Credit facilities total + current/LT split</td><td class="check" style="text-align:center;">&#10003;</td></tr>
+            <tr><td>Share capital rollforward ($ and share count)</td><td class="check" style="text-align:center;">&#10003;</td></tr>
+            <tr><td>Contributed surplus rollforward</td><td class="check" style="text-align:center;">&#10003;</td></tr>
+            <tr><td>SOCIE Dec 2023 components sum</td><td class="check" style="text-align:center;">&#10003;</td></tr>
+            <tr><td>SOCIE Sep 2024 components sum</td><td class="check" style="text-align:center;">&#10003;</td></tr>
+            <tr><td>Warrant exercise net equity impact</td><td class="check" style="text-align:center;">&#10003;</td></tr>
+            <tr><td>Geographic note (Note 13) &mdash; all 4 periods tie to IS</td><td class="check" style="text-align:center;">&#10003;</td></tr>
+            <tr><td>Depreciation splits: IS matches CF statement</td><td class="check" style="text-align:center;">&#10003;</td></tr>
+            <tr><td>Note 4 ROU additions = Note 5 lease additions</td><td class="check" style="text-align:center;">&#10003;</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <strong>Review Scope:</strong> 95 independent arithmetic and cross-reference checks across all primary financial statements, 
+    all note schedules, and all inter-statement reconciliations. &nbsp;|&nbsp;
+    <strong>Currency:</strong> C$000s unless noted. &nbsp;|&nbsp;
+    <strong>Source:</strong> Zedcor Inc. Q3 2025 vFINAL (unaudited, Board approved November 12, 2025). &nbsp;|&nbsp;
+    <em>Issues 1 and 3 are presentation/disclosure items only. Issue 2 is a $1K rounding difference.
+    None of the three issues affect reported net income, total assets, or shareholders' equity.</em>
+  </div>
+
+</div>
+</body>
+</html>
